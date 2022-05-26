@@ -23,7 +23,7 @@ const MovieDetailsPage = () => {
         if (!routerState.current) {
             routerState.current = location.state;
         }
-    }, [/* location.state */]);
+    }, [location.state]);
 
     useEffect(() => {
         getMoviesById(moviesId).then(setMoviesIdInfo);
