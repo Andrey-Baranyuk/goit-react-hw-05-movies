@@ -4,6 +4,8 @@ import Cast from "components/Cast/Cast";
 import Reviews from 'components/Reviews/Reviews';
 import { useEffect, useRef, useState } from "react";
 
+import styles from './MoviesDetailsPage.module.css'
+
 const MovieDetailsPage = () => {
     const match = useRouteMatch();
     const [moviesIdInfo, setMoviesIdInfo] = useState(null);
@@ -21,7 +23,7 @@ const MovieDetailsPage = () => {
         if (!routerState.current) {
             routerState.current = location.state;
         }
-    }, [location.state]);
+    }, [/* location.state */]);
 
     useEffect(() => {
         getMoviesById(moviesId).then(setMoviesIdInfo);
@@ -31,10 +33,10 @@ const MovieDetailsPage = () => {
 
     return (
         <>
-            <button onClick={() => {
+            <button className={styles.btn} onClick={() => {
                 const paramsPath = routerState.current.params.pathname;
                 const paramsSearch = routerState.current.params.search;
-                history.push(`${paramsPath}, ${paramsSearch}`);
+                history.push(`${paramsPath}${paramsSearch}`);
             }}>
                 Back
                 
@@ -47,7 +49,7 @@ const MovieDetailsPage = () => {
                     <img
                         src={`https://image.tmdb.org/t/p/w500${moviesIdInfo.poster_path}`}
                         alt={moviesIdInfo.title}
-                        width="150"
+                        width="250"
                     />
                     <h2>
                         {moviesIdInfo.title}({moviesIdInfo.release_date.slice(0, 4)})

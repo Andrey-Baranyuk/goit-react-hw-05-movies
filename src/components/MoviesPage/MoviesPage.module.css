@@ -1,0 +1,16 @@
+.Movies__btn {
+  border-radius: 4px;
+  border: 1px solid;
+  background-color: greenyellow;
+  color: black;
+  margin-left: 10px;
+}
+.Movies__btn:hover,
+.Movies__btn:focus {
+  background-color: yellow;
+  box-shadow: 2px inherit;
+}
+.MoviesPage__item {
+  list-style: none;
+  margin-bottom: 5px;
+}

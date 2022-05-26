@@ -1,6 +1,7 @@
 import { getMovies } from "Api/Api";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from 'react-router-dom';
+import styles from './HomePage.module.css'
 
 
 const HomePage = () => {
@@ -17,7 +18,7 @@ const HomePage = () => {
                 movies &&
                 movies.map(
                     movie => (
-                        <li key={movie.id}>
+                        <li key={movie.id} className={styles.HomePage__item}>
                             <Link
                                 to={{
                                     pathname: `movies/${movie.id}`,

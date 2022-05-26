@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
-import { Route, Switch } from "react";
+import { Route, Switch } from "react-router-dom";
 import  Navigation  from "../Navigation/Navigation";
-//import styles from "./App.module.css";
+import styles from "./App.module.css";
 
 const HomePage = lazy(() => import('components/HomePage/HomePage.jsx'))
 const MoviesPage = lazy(() => import('components/MoviesPage/MoviesPage.jsx'));
@@ -11,7 +11,7 @@ const NotFoundView = lazy(() => import('../NotFoundView/NotFoundView.jsx'),
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.App}>
       <Navigation />
       <Suspense fallback={<div>Loading</div>}>
         <Switch>
