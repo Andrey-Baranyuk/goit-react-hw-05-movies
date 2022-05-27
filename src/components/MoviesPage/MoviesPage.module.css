@@ -14,3 +14,7 @@
   list-style: none;
   margin-bottom: 5px;
 }
+
+.MoviesPage__input {
+  margin-bottom: 10px;
+}

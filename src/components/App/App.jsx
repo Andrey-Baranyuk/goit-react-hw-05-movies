@@ -5,8 +5,8 @@ import styles from "./App.module.css";
 
 const HomePage = lazy(() => import('components/HomePage/HomePage.jsx'))
 const MoviesPage = lazy(() => import('components/MoviesPage/MoviesPage.jsx'));
-const MovieDetailsPage = lazy(() => import('../MoviesDetailsPage/MoviesDetailsPage.jsx'));
-const NotFoundView = lazy(() => import('../NotFoundView/NotFoundView.jsx'),
+const MovieDetailsPage = lazy(() => import('components/MoviesDetailsPage/MoviesDetailsPage.jsx'));
+const NotFoundView = lazy(() => import('components/NotFoundView/NotFoundView.jsx'),
 );
 
 function App() {
